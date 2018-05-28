@@ -1,0 +1,9 @@
+Blowfish (deutsch Kugelfisch) ist ein symetrischer Verschluesselungsalgorithmus, der 1993 von Bruce Schneier entworfen und erstmals im April 1994 in Dr. Dobb`sJournal publiziert wurde.
+
+Blowfish hat als Blockchiffre eine feste Blocklänge von 64 Bit, basiert auf einem Feistelnetzwerk, welches die Umkehrbarkeit zwischen Verschlüsselung und Entschlüsselung garantiert, und besitzt schlüsselabhängige S-Boxen. Die Schlüssellänge kann zwischen 32 Bit und 448 Bit betragen. Aus diesen Schlüsselbits werden vor Beginn der Ver- oder Entschlüsselung die so genannten Rundenschlüssel P1 bis P18 und die Einträge in den S-Boxen erzeugt, insgesamt 4168 Byte
+
+CBC Modus
+Im CBC Modus wird jeder Block N als zusaetzliche Information fuer die Verschluesselung von Block N+1 verwendet. Fuer den ersten Block steht keine solche Information zur Verfuegung, daher muss ein Initialisierungs Vektor(iv) mitgegeben werden. Der iv muss fuer die Ver/ und Entschluesselung der gleiche sein, da sonst der erste Block und damit auch alle folgenden Bloecke nicht richtig entschluesselt werden koennen. Des Weiteren benoetigt der iv die selbe Laenge wie die Blockgroesse, also 64bit.
+
+Aufbau blowfish_secret | iv | encrypted_message |
+Schluessel: bsprak2018
